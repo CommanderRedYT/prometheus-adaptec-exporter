@@ -5,7 +5,7 @@ from prometheus_client import start_http_server, Gauge
 
 def get_temperature() -> tuple[int, int] | None:
     try:
-        output = subprocess.check_output(["sudo", "arcconf", "getconfig", "1", "AD"]).decode("utf-8")
+        output = subprocess.check_output(["arcconf", "getconfig", "1", "AD"]).decode("utf-8")
         match = re.search(r"Temperature\s+:\s+(\d+)\s+C/\s+(\d+)\s+F", output)
         if match:
             return match.group(1), match.group(2)
