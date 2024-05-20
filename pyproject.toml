@@ -1,0 +1,16 @@
+[project]
+name = "prometheus_adaptec_exporter"
+version = "1.0.0"
+dependencies = [
+    "prometheus_client"
+]
+
+[project.scripts]
+prometheus-adaptec-exporter = "adaptec_exporter:run_cli"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages]
+find = {}
