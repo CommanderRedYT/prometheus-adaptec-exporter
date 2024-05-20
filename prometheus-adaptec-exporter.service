@@ -9,7 +9,6 @@ ExecStart=/usr/bin/prometheus-adaptec-exporter $TASMOTA_POWER_EXPORTER_ARGS
 ExecReload=/bin/kill -HUP $MAINPID
 NoNewPrivileges=true
 ProtectHome=read-only
-ProtectSystem=strict
 SyslogIdentifier=prometheus-tasmota-power-exporter
 Restart=on-failure
 
